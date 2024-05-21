@@ -12,9 +12,12 @@
             padding: 0;
             background-color: #f5f5f5;
             color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         header {
-            background-color: #1a1a1a;
+            background-color: #bb8000;
             color: white;
             padding: 10px 0;
             text-align: center;
@@ -33,18 +36,19 @@
             padding: 20px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            text-align: left;
+            flex-grow: 1;
         }
         main h2 {
             font-size: 1.5em;
             font-weight: 500;
-            color: #007bbc;
+            color: #1380a1;
             margin-bottom: 10px;
         }
         main p {
             font-size: 1em;
             line-height: 1.6;
             margin: 10px 0;
-            text-align: left;
         }
         .separator {
             width: 100%;
@@ -62,12 +66,28 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+        .toggle-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .toggle-container button {
+            background-color: #007bbc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .toggle-container button:hover {
+            background-color: #005f8b;
+        }
         footer {
             background-color: #1a1a1a;
             color: white;
             text-align: center;
             padding: 10px 0;
-            margin-top: 20px;
             box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
         }
         footer p {
@@ -93,9 +113,15 @@
     <main>
         <h2>Introduction</h2>
         <p>This is a minimalistic page designed to display an embedded iframe.</p>
+        <div class="toggle-container">
+            <button onclick="document.getElementById('more').scrollIntoView({ behavior: 'smooth' });">Scroll to know more</button>
+        </div>
         <div class="separator"></div>
         <div class="iframe-container">
             <iframe src="https://flo.uri.sh/visualisation/17466769/embed" title="Interactive or visual content" class="flourish-embed-iframe" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"></iframe>
+        </div>
+        <div id="more">
+            <!-- Additional content can be added here -->
         </div>
     </main>
     <footer>
