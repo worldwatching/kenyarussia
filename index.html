@@ -4,30 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minimalistic GitHub Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Open Sans', sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            height: 100vh;
+            background-color: #f5f5f5;
+            color: #333;
             text-align: center;
         }
-        h1, h2, p {
-            margin: 0.5em 0;
+        header {
+            background-color: #007acc;
+            color: white;
+            width: 100%;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 600;
+        }
+        main {
+            padding: 20px;
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h2 {
+            font-size: 2em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.2em;
+            margin: 10px 0;
         }
         .separator {
-            width: 80%;
-            border-top: 1px solid #ccc;
-            margin: 20px 0;
+            width: 100%;
+            border-top: 1px solid #ddd;
+            margin: 30px 0;
         }
         .iframe-container {
             width: 100%;
-            max-width: 800px;
             margin: 20px 0;
+        }
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 8px;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px 0;
+            width: 100%;
+            background-color: #007acc;
+            color: white;
         }
     </style>
 </head>
@@ -40,8 +80,11 @@
         <p>This is a minimalistic page designed to display an embedded iframe.</p>
         <div class="separator"></div>
         <div class="iframe-container">
-            <iframe src="https://flo.uri.sh/visualisation/17466769/embed" title="Interactive or visual content" class="flourish-embed-iframe" frameborder="0" scrolling="no" style="width:100%;height:600px;" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"></iframe>
+            <iframe src="https://flo.uri.sh/visualisation/17466769/embed" title="Interactive or visual content" class="flourish-embed-iframe" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"></iframe>
         </div>
     </main>
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
 </body>
 </html>
